@@ -1,0 +1,265 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+:root{
+--background: rgba(0, 0, 0, 1);
+--text: #c9c8bb;
+--main1: #92BC62;
+--main2: #f5f5f5;
+--space: 20px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+   
+    background-color: var(--background);
+    color: var(--text);
+    font-family: "Babas Neue", sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.content {
+    max-width: 90%;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+
+    z-index: 100;
+
+    background: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);  /* note: same comand as backdrop-filter but for safari */
+
+    border-bottom: 1px solid var(--text);
+}
+
+header:before {
+    content: "";
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 45%;
+
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0)
+    );
+}
+
+
+header .content {
+    text-shadow: 0 0 20px rgba(255,255,255,0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space);
+}
+
+.logo{
+    color: var(--main1);
+    font-size: 28px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.menu{
+    display: flex;
+    gap: 32px;
+    list-style: none;
+}
+
+.menu a{
+    color: var(--main2);
+    text-decoration: none;
+}
+
+.hero {
+   
+    background-image: 
+    linear-gradient(
+    to top,
+    rgba(0,0,0,1) 1%,
+    rgba(0,0,0,0.5) 15%,
+    rgba(0,0,0,0.3) 30%,
+    rgba(0,0,0,0) 50%
+    ),
+    url("images/earthhero.jpg");
+    
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    
+}
+
+.hero .content{
+    min-height: 100vh;
+
+    padding: var(--space);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.hero p {
+    position: relative;
+    max-width: 700px;
+    z-index: 5;
+}
+
+.hero p::before {
+    content: "";
+    position: absolute;
+    inset: -15px;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    filter: blur(15px);
+
+    z-index: -1;
+}
+
+h1, h2 {
+    font-family: "Babas Neue", sans-serif,
+    'Times New Roman', Times, serif;
+}
+
+h1{
+    text-shadow: 0 0 20px rgba(255,255,255,0.2);
+    color: var(--main2);
+    font-size: 72px;
+}
+
+p{
+    text-shadow: 0 0 20px rgba(255,255,255,0.2);
+    margin: 0 0 16px;
+}
+
+.label {
+    color: var(--main1);
+    font-weight: 700;
+}
+
+.button{
+    align-self: flex-start;
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--main1);
+    color: var(--background);
+    font-weight: 700;
+    text-decoration: none;
+    Z-index: 5;
+    border-radius: 5px;
+}
+
+.factscroll {
+    min-height: 50vh;
+    
+    background-color: var(--background);
+
+    position: relative; 
+}
+.factscroll .content {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 100px; 
+    padding-bottom: 20px;
+}
+
+.facts-carousel {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);  
+    gap: 24px;
+}
+
+.fact-card {
+    height: 320px;
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.fact-card h3 { 
+    height: 3.2em; 
+    margin: 0; 
+    padding: 8px 12px; 
+    overflow-wrap: anywhere; 
+}
+.fact-card img { 
+    width: 100%; 
+    height: 160px; 
+    object-fit: cover; 
+    display: block; 
+}
+
+.fact-card .button {
+    margin: auto 12px 12px;
+    align-self: flex-start;
+    padding: 12px 24px;
+
+    background: var(--main1);
+    color: var(--background);
+
+    font-weight: 700;
+    text-decoration: none;
+
+    border-radius: 5px;
+}
+
+.paragraphs{
+    background-color: var(--background);
+    padding: 80px 28px;
+}
+
+.paragraphs .content{
+    max-width: 850px;      
+    margin: 0 auto;  
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: var(--space);
+    
+}
+
+.paragraphs .content > div > p {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid var(--text);
+    border-bottom: 1px solid var(--text);
+}
+
+.paragraphs .content > div > h1 {
+    padding-top: 100px;
+    padding-bottom: 5px;
+ 
+}
+
+
+
+
+
